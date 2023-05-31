@@ -1,0 +1,474 @@
+/* FONTS */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+
+
+:root{
+    --font-regular: 'Space Grotesk', sans-serif;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+html{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+/* MAIN PAGE */
+main{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+p, h1, h2, div, label, ::placeholder{
+    font-family: var(--font-regular);   
+}
+
+.hide{
+    display: none !important;
+}
+
+.left-side{
+    width: 35%;
+    height: 100%;
+    box-sizing: border-box;
+    background-image: url("./images/bg-main-desktop.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.right-side{
+    width: 65%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.credit-card-heads {
+	width: 425px;
+	height: 233px;
+	margin-top: 176px;
+	margin-left: 50%;
+	padding: 20px;
+	border-radius: 15px;
+	background-image: url("./images/bg-card-front.png");
+	background-size: contain;
+	box-sizing: border-box;
+}
+
+.credit-card-heads p{
+    color: hsl(0, 0%, 100%);
+}
+
+.card-number{
+    display: flex;
+    margin-top: 65px;
+    margin-bottom: 20px;
+    font-size: 160%;
+    gap: 2px;
+}
+
+.number-spacer{
+    margin-right: 10px;
+}
+
+.cardholder-credentials{
+    display: flex;
+    justify-content: space-between;
+    letter-spacing: 1px;
+}
+
+.cardholder-name{
+    display: flex;  
+}
+
+.expiration-date{
+    display: flex;
+}
+
+
+.credit-card-tails {
+	width: 425px;
+	height: 233px;
+	margin-top: 25px;
+	margin-left: 60%;
+	border-radius: 15px;
+	background-image: url("./images/bg-card-back.png");
+	background-size: contain;
+	box-sizing: border-box;
+}
+
+.credit-card-tails span{
+    display: flex;
+    position: relative;
+    top: 105px;
+    left: 335px;
+    color: white;
+}
+
+.form-wrapper{
+    display: grid;
+    place-content: center;
+    width: 600px;
+    margin: auto;   
+    padding-top: 200px;
+}
+
+form{
+    width: 366px;
+}
+
+.field{
+    display: flex;
+    flex-direction: column;
+}
+
+.field label{
+    margin-bottom: 7px;
+    text-transform: uppercase;
+}
+
+::placeholder{
+    color: #C6C4C7;
+}
+
+input[type=text]{
+    padding: 10px;
+    margin-left: 2px;
+    border: 1px solid #C6C4C7;
+    border-radius: 5px;
+    height: 37px;
+    box-sizing: border-box;
+}
+
+input[type=text]:hover, 
+input[type=text]:focus{
+    border: 2.5px solid #220930;
+}
+
+.expiration-date-label label:nth-child(2){
+    margin-left: 40px;
+}
+
+
+
+.expiration-date-input input:nth-child(1){
+    width: 75px;
+    margin-right: 5px;
+    margin-top: 10px;
+    padding-right: 20px;
+}
+
+.expiration-date-input input:nth-child(2){
+    width: 75px;
+    margin-right: 20px;
+    padding-right: 20px;
+}
+
+.expiration-date-input input:nth-child(3){
+    width: 176px;
+}
+
+button[type=submit]{
+    width: 100%;
+    height: 37px;
+    margin-top: 20px;
+    background-color: #220930;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    box-sizing: border-box;
+}
+
+
+/** RESPONSE */
+
+
+
+.error{
+    border: 2.5px solid hsl(0, 100%, 66%) !important;
+}
+
+.red{
+    height: 20px;
+    padding: 5px;
+    color: hsl(0, 100%, 66%);
+    font-size: 80%;
+}
+
+.expiration-cvc-response{
+    display: flex;
+}
+
+#response-date{
+    width: 175px;
+}
+
+
+.card-added{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 366px;
+    margin: auto;   
+    padding-top: 275px;
+}
+
+
+.card-added svg{
+    margin-bottom: 50px;
+}
+
+.card-added h2{
+    text-transform: uppercase;
+}
+
+.card-added p{
+    color: #C6C4C7; 
+}
+
+.card-added button{
+    width: 100%;
+    height: 37px;
+    margin-top: 20px;
+    background-color: #220930;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 1300px){
+
+    .credit-card-heads{
+        width: 329px;
+        height: 180px;
+        margin: 0;
+        position: relative;
+        top: 170px;
+        left: 60px;
+    }
+
+    .credit-card-heads img{
+        height: 40px;
+        width: auto;
+    }
+
+    .card-number{
+        font-size: 120%;
+        gap: 1px;
+        margin-top: 30px;
+    }
+
+    .number-spacer{
+        margin-right: 5px;
+    }
+
+    .cardholder-credentials{
+        font-size: 90%;
+    }
+
+    .credit-card-tails{
+        width: 329px;
+        height: 180px;
+        margin: 0;
+        position: relative;
+        top: 200px;
+        left: 100px;
+    }
+
+    .credit-card-tails span{
+        position: relative;
+        top: 78px;
+        left: 250px;
+    }
+
+    
+    .form-wrapper{
+        width: 450px;
+        padding-top: 200px;
+    }
+
+    form{
+        width: 320px;
+        margin: auto;
+    }
+
+    .expiration-date-input input:nth-child(1) {
+        width: 70px;
+        margin-right: 2.55px;
+        margin-top: 5px;
+        padding-right: 20px;
+    }
+
+    .expiration-date-input input:nth-child(2) {
+        width: 70px;
+        margin-right: 20px;
+        padding-right: 20px;
+    }
+
+    .expiration-date-input input:nth-child(3) {
+        width: 143px;
+    }
+
+    .expiration-date-label label:nth-child(2) {
+        margin-left: 25px;
+    }
+
+}
+
+
+@media screen and (max-width: 800px) {
+
+        html{
+            box-sizing: content-box;
+        }
+        
+        body{
+            box-sizing: content-box;
+        }
+        main {
+            flex-direction: column;
+            box-sizing: content-box;
+        }
+
+        .left-side{
+            width: 100%;
+            height: 200px;
+        }
+
+        .right-side{
+            width: 100%;
+        }
+
+        .credit-card-heads{
+            z-index: 5;
+            margin: 0;
+            width: 274px;
+            height: 150px;
+            padding: 10px;
+            position: relative;
+            top: 110px;
+            left: 10%;
+            -webkit-box-shadow: 1px 19px 15px 4px rgba(0,0,0,0.1); 
+            box-shadow: 1px 19px 15px 4px rgba(0,0,0,0.1);
+        }
+
+        .credit-card-heads img{
+            height: 30px;
+            width: auto;
+        }
+
+        .card-number{
+            font-size: 100%;
+            gap: 1px;
+            margin-top: 30px;
+        }
+
+        .number-spacer{
+            margin-right: 5px;
+        }
+
+        .cardholder-credentials{
+            font-size: 80%;
+        }
+
+        .credit-card-tails{
+            z-index: 4;
+            margin: 0;
+            width: 274px;
+            height: 150px;
+            position: relative;
+            top: -130px;
+            left: 20%;
+
+        }
+
+        .credit-card-tails span{
+            width: 50px;
+            font-size: 80%;
+            position: relative;
+            top: 65px;
+            left: 210px;
+
+        }
+
+
+
+
+        .form-wrapper{
+            width: 375px;
+            padding-top: 80px;
+        }
+
+        form{
+            width:300px;
+        }
+
+        .field label {
+            font-size: 90%;
+        }
+
+        .expiration-date-input input:nth-child(1) {
+            width: 60px;
+            margin-right: 2.55px;
+            margin-top: 5px;
+            padding-right: 20px;
+        }
+
+        .expiration-date-input input:nth-child(2) {
+            width: 60px;
+            margin-right: 20px;
+            padding-right: 20px;
+        }
+
+        .expiration-date-input input:nth-child(3) {
+            width: 143px;
+        }
+
+        .expiration-date-label label:nth-child(2) {
+            margin-left: 25px;
+        }
+
+        button[type="submit"] {
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .red{
+            height: 20px;
+            padding: 0;
+        }
+
+        .card-added{
+            margin: auto;
+            width: 300px;
+            padding-top: 80px;
+        }
+
+        .card-added img{
+            margin-bottom: 30px;
+        }
+
+        .card-added p {
+            margin-bottom: 30px;
+        }
+  }
